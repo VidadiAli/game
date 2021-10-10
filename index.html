@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap.js">
+  </head>
+  <body>
+
+      <div class="box1" id="box1">
+          <div class="box2">
+            <div class="qutu1" value="alma" id="qutu0"></div>
+            <div class="qutu1" value="alma" id="qutu1"></div>
+            <div class="qutu1" value="alma" id="qutu2"></div>
+            <div class="qutu1" value="alma" id="qutu3"></div>
+            <div class="qutu1" value="alma" id="qutu4"></div>
+            <div class="qutu1" value="alma" id="qutu5"></div>
+            <div class="qutu1" value="alma" id="qutu6"></div>
+            <div class="qutu1" value="alma" id="qutu7"></div>
+            <div class="qutu1" value="alma" id="qutu8"></div>
+            <div class="qutu1" value="alma" id="qutu9"></div>
+            <div class="qutu1" value="alma" id="qutu10"></div>
+            <div class="qutu1" value="alma" id="qutu11"></div>
+            <div class="qutu1" value="alma" id="qutu12"></div>
+            <div class="qutu1" value="alma" id="qutu13"></div>
+            <div class="qutu1" value="alma" id="qutu14"></div>
+            <div class="qutu1" value="alma" id="qutu20"></div>
+            <div class="qutu1" value="alma" id="qutu21"></div>
+            <div class="qutu1" value="alma" id="qutu22"></div>
+            <div class="qutu1" value="alma" id="qutu23"></div>
+            <div class="qutu1" value="alma" id="qutu24"></div>
+               <div class="box3" id="box3_1"></div>
+               <div class="box3" id="box3_2"></div>
+               <div class="box3" id="box3_3"></div>
+               <div class="box3" id="box3_4"></div>
+               <div class="box3" id="box3_5"></div>
+               <button id="btn1" class="btn btn-success">Play</button>
+               <span class="span1 btn btn-danger" id="hesab">0</span>
+          </div>
+      </div>
+
+      <script src="bootstrap.js"></script>
+      <script type="text/javascript">
+        var list, list2, i, random1, random2, list3, j, p=0, a=1, b=1, c=1, d=1, e=1, a1=1, b1=1, c1=1, d1=1, e1=1, a2=1, b2=1, c2=1, d2=1, e2=1, a3=1, b3=1, c3=1, d3=1, e3=1, a4=1, b4=1, c4=1, d4=1, e4=1;
+        list=["red", "yellow", "pink", "green", "darkorange", "red", "yellow", "pink", "green", "darkorange", "red", "yellow", "pink", "green", "darkorange"];
+        list2=["24%", "36%", "48%", "60%", "72%", "24%", "36%", "48%", "60%", "72%", "24%", "36%", "48%", "60%", "72%"];
+ 
+        
+
+        qutu0=document.getElementById('qutu0');
+        qutu1=document.getElementById('qutu1');
+        qutu2=document.getElementById('qutu2');
+        qutu3=document.getElementById('qutu3');
+        qutu4=document.getElementById('qutu4');
+        qutu5=document.getElementById('qutu5');
+        qutu6=document.getElementById('qutu6');
+        qutu7=document.getElementById('qutu7');
+        qutu8=document.getElementById('qutu8');
+        qutu9=document.getElementById('qutu9');
+        qutu10=document.getElementById('qutu10');
+        qutu11=document.getElementById('qutu11');
+        qutu12=document.getElementById('qutu12');
+        qutu13=document.getElementById('qutu13');
+        qutu14=document.getElementById('qutu14');
+        qutu20=document.getElementById('qutu20');
+        qutu21=document.getElementById('qutu21');
+        qutu22=document.getElementById('qutu22');
+        qutu23=document.getElementById('qutu23');
+        qutu24=document.getElementById('qutu24');
+
+        list3=[qutu4, qutu0, qutu3, qutu1, qutu2, qutu24, qutu22, qutu10, qutu5, qutu7, qutu8, qutu21, qutu6, qutu20, qutu23, qutu12, qutu14, qutu11, qutu13, qutu4, qutu0, qutu3, qutu1, qutu2, qutu24, qutu22, qutu10, qutu5, qutu7, qutu8, qutu21, qutu6, qutu20, qutu23, qutu12, qutu14, qutu11, qutu13];
+        var list4;
+
+        btn1.onclick=function() {
+               var zaman=setInterval(zaman1, 2000);
+               function zaman1(){
+                   i=parseInt(Math.random()*14);
+                   j=parseInt(Math.random()*37);
+
+                  list3[j].style.top="25rem";
+                  list3[j].style.left=list2[i];
+                  list3[j].style.background=list[i];
+                  list3[j].style.transition="4s";
+
+                  box3_1.onclick=function() {
+                    a++;
+                    b++;
+                    c++;
+                    d++;
+                    e++;
+                    if(a==1 || a==6 || a==11 || a==16 || a==21 || a==26 || a==31 || a==36 || a==41 || a==46 || a==51 || a==56){
+                      box3_1.style.background="red";
+                      if(list3[j].style.left=="24%" && list3[j].style.background=="red"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(b==2 || b==7 || b==12 || b==17 || b==22 || b==27 || b==32 || b==37 || b==42 || b==47 || b==52 || b==57){
+                      box3_1.style.background="yellow";
+                      if(list3[j].style.left=="36%" && list3[j].style.background=="yellow"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(c==3 || c==8 || c==13 || c==18 || c==23 || c==28 || c==33 || c==38 || c==43 || c==48 || c==53 || c==58){
+                      box3_1.style.background="green";
+                      if(list3[j].style.left=="48%" && list3[j].style.background=="green"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(d==4 || d==9 || d==14 || d==19 || d==24 || d==29 || d==34 || d==39 || d==44 || d==49 || d==54 || d==59){
+                      box3_1.style.background="darkorange";
+                      if(list3[j].style.left=="60%" && list3[j].style.background=="darkorange"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(e==5 || e==10 || e==15 || e==20 || e==25 || e==30 || e==35 || e==40 || e==45 || e==50 || e==55 || e==60){
+                      box3_1.style.background="pink";
+                      if(list3[j].style.left=="72%" && list3[j].style.background=="pink"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                  }
+                  box3_2.onclick=function() {
+                    a1++;
+                    b1++;
+                    c1++;
+                    d1++;
+                    e1++;
+                    if(a1==1 || a1==6 || a1==11 || a1==16 || a1==21 || a1==26 || a1==31 || a1==36 || a1==41 || a1==46 || a1==51 || a1==56){
+                      box3_2.style.background="red";
+                      if(list3[j].style.left=="24%" && list3[j].style.background=="red"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(b1==2 || b1==7 || b1==12 || b1==17 || b1==22 || b1==27 || b1==32 || b1==37 || b1==42 || b1==47 || b1==52 || b1==57){
+                      box3_2.style.background="yellow";
+                      if(list3[j].style.left=="36%" && list3[j].style.background=="yellow"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(c1==3 || c1==8 || c1==13 || c1==18 || c1==23 || c1==28 || c1==33 || c1==38 || c1==43 || c1==48 || c1==53 || c1==58){
+                      box3_2.style.background="green";
+                      if(list3[j].style.left=="48%" && list3[j].style.background=="green"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(d1==4 || d1==9 || d1==14 || d1==19 || d1==24 || d1==29 || d1==34 || d1==39 || d1==44 || d1==49 || d1==54 || d1==59){
+                      box3_2.style.background="darkorange";
+                      if(list3[j].style.left=="60%" && list3[j].style.background=="darkorange"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(e1==5 || e1==10 || e1==15 || e1==20 || e1==25 || e1==30 || e1==35 || e1==40 || e1==45 || e1==50 || e1==55 || e==60){
+                      box3_2.style.background="pink";
+                      if(list3[j].style.left=="72%" && list3[j].style.background=="pink"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                  }
+                  box3_3.onclick=function() {
+                    a2++;
+                    b2++;
+                    c2++;
+                    d2++;
+                    e2++;
+                    if(a2==1 || a2==6 || a2==11 || a2==16 || a2==21 || a2==26 || a2==31 || a2==36 || a2==41 || a2==46 || a2==51 || a2==56){
+                      box3_3.style.background="red";
+                      if(list3[j].style.left=="24%" && list3[j].style.background=="red"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(b2==2 || b2==7 || b2==12 || b2==17 || b2==22 || b2==27 || b2==32 || b2==37 || b2==42 || b2==47 || b2==52 || b2==57){
+                      box3_3.style.background="yellow";
+                      if(list3[j].style.left=="36%" && list3[j].style.background=="yellow"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(c2==3 || c2==8 || c2==13 || c2==18 || c2==23 || c2==28 || c2==33 || c2==38 || c2==43 || c2==48 || c2==53 || c2==58){
+                      box3_3.style.background="green";
+                      if(list3[j].style.left=="48%" && list3[j].style.background=="green"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(d2==4 || d2==9 || d2==14 || d2==19 || d2==24 || d2==29 || d2==34 || d2==39 || d2==44 || d2==49 || d2==54 || d2==59){
+                      box3_3.style.background="darkorange";
+                      if(list3[j].style.left=="60%" && list3[j].style.background=="darkorange"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(e2==5 || e2==10 || e2==15 || e2==20 || e2==25 || e2==30 || e2==35 || e2==40 || e2==45 || e2==50 || e2==55 || e2==60){
+                      box3_3.style.background="pink";
+                      if(list3[j].style.left=="72%" && list3[j].style.background=="pink"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                  }
+                  box3_4.onclick=function() {
+                    a3++;
+                    b3++;
+                    c3++;
+                    d3++;
+                    e3++;
+                    if(a3==1 || a3==6 || a3==11 || a==16 || a3==21 || a3==26 || a3==31 || a3==36 || a3==41 || a3==46 || a3==51 || a3==56){
+                      box3_4.style.background="red";
+                      if(list3[j].style.left=="24%" && list3[j].style.background=="red"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(b3==2 || b3==7 || b3==12 || b3==17 || b3==22 || b3==27 || b3==32 || b3==37 || b3==42 || b3==47 || b3==52 || b3==57){
+                      box3_4.style.background="yellow";
+                      if(list3[j].style.left=="36%" && list3[j].style.background=="yellow"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(c3==3 || c3==8 || c3==13 || c3==18 || c3==23 || c3==28 || c3==33 || c3==38 || c3==43 || c3==48 || c3==53 || c3==58){
+                      box3_4.style.background="green";
+                      if(list3[j].style.left=="48%" && list3[j].style.background=="green"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(d3==4 || d3==9 || d3==14 || d3==19 || d3==24 || d3==29 || d3==34 || d3==39 || d3==44 || d3==49 || d3==54 || d3==59){
+                      box3_4.style.background="darkorange";
+                      if(list3[j].style.left=="60%" && list3[j].style.background=="darkorange"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(e3==5 || e3==10 || e3==15 || e3==20 || e3==25 || e3==30 || e3==35 || e3==40 || e3==45 || e3==50 || e3==55 || e3==60){
+                      box3_4.style.background="pink";
+                      if(list3[j].style.left=="72%" && list3[j].style.background=="pink"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                  }
+                  box3_5.onclick=function() {
+                    a4++;
+                    b4++;
+                    c4++;
+                    d4++;
+                    e4++;
+                    if(a4==1 || a4==6 || a4==11 || a4==16 || a4==21 || a4==26 || a4==31 || a4==36 || a4==41 || a4==46 || a4==51 || a4==56){
+                      box3_5.style.background="red";
+                      if(list3[j].style.left=="24%" && list3[j].style.background=="red"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(b4==2 || b4==7 || b4==12 || b4==17 || b4==22 || b4==27 || b4==32 || b4==37 || b4==42 || b4==47 || b4==52 || b4==57){
+                      box3_5.style.background="yellow";
+                      if(list3[j].style.left=="36%" && list3[j].style.background=="yellow"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(c4==3 || c4==8 || c4==13 || c4==18 || c4==23 || c4==28 || c4==33 || c4==38 || c4==43 || c4==48 || c4==53 || c4==58){
+                      box3_5.style.background="green";
+                      if(list3[j].style.left=="48%" && list3[j].style.background=="green"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(d4==4 || d4==9 || d4==14 || d4==19 || d4==24 || d4==29 || d4==34 || d4==39 || d4==44 || d4==49 || d4==54 || d4==59){
+                      box3_5.style.background="darkorange";
+                      if(list3[j].style.left=="60%" && list3[j].style.background=="darkorange"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                    if(e4==5 || e4==10 || e4==15 || e4==20 || e4==25 || e4==30 || e4==35 || e4==40 || e4==45 || e4==50 || e4==55 || e4==60){
+                      box3_5.style.background="pink";
+                      if(list3[j].style.left=="72%" && list3[j].style.background=="pink"){
+                        hesab.textContent=Number(hesab.textContent)+1;
+                      }
+                    }
+                  }
+                  p++;
+                  if(p==70){
+                       alert("Game over...");
+                    }
+                }
+
+                if (hesab.textContent==10) {
+                  alert("You are Winner...");
+                }
+          }
+      </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+.box1{
+    text-align: center;
+}
+.box2{
+    width: 20rem;
+    height: 37rem;
+    background-color: blueviolet;
+    border: 2px solid black;
+    margin-right: auto;
+    margin-left: auto;
+}
+.box3{
+    position: absolute;
+    top: 25rem;
+    width: 2rem;
+    height: 6rem;
+    border: .5px solid black;
+    border-top: none;
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+#box3_1{
+    position: absolute;
+    left: 23%;
+    background-color: yellow;
+}
+#box3_2{
+    position: absolute;
+    left: 35%;
+    background-color: red;
+}
+#box3_3{
+    position: absolute;
+    left: 47%;
+    background-color: green;
+}
+#box3_4{
+    position: absolute;
+    left: 59%;
+    background-color: darkorange;
+}
+#box3_5{
+    position: absolute;
+    left: 71%;
+    background-color: pink;
+}
+.qutu1{
+    position: absolute;
+    top: -1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 100%;
+}
+.btn-success{
+    position: absolute;
+    top: 32rem;
+    left: 13rem;
+}
+.span1{
+    position: absolute;
+    top: 32rem;
+    left: 10rem;
+    display: inline-block;
+}
